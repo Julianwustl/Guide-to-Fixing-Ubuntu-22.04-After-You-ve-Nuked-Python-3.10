@@ -1,0 +1,1 @@
+# Guide-to-Fixing-Ubuntu-22.04-After-You-ve-Nuked-Python-3.10
