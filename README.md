@@ -1,4 +1,4 @@
-# Guide-to-Fixing-Ubuntu-22.04-After-You-ve-Nuked-Python-3.10
+# Guide-to-Fixing-Ubuntu-22.04-After-You-ve-Wracked-Python-3.10
 
 
 If you've accidentally wrecked your Python installation on a Debian-based system like Ubuntu, you're in for a wild ride. Though the fix might seem trivial, messing up Python can tie your system into knots in ways you wouldn't believe. So, for those unlucky enough to have blundered like I have, here’s how to claw your way back:
