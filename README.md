@@ -25,33 +25,31 @@ Head over to [packages.ubuntu.com](https://packages.ubuntu.com), search for the 
 - `libpython3-stdlib`
 - `python 3.10`
 
-Make sure they match your Ubuntu release to avoid further chaos. Once downloaded, install them in the correct order as you can observe this  [link](https://packages.ubuntu.com/jammy/python/python3)
+It is import to note again, you midght need more installations, but you will realize, as apt keeps breaking if you are not done.
 
-bash
-
+Make sure they match your Ubuntu release to avoid further chaos. Once downloaded, install them in the correct order as you can observe this  [link](https://packages.ubuntu.com/jammy/python/python3) here is an example from this answer [answer](https://askubuntu.com/questions/1487336/how-to-fix-the-error-of-complete-removing-python-from-ubuntu-20-04)
+```bash
 cd ~/Downloads
 sudo dpkg -i python3-minimal_3.10.6-1~22.04_amd64.deb
 sudo dpkg -i libpython3-stdlib_3.10.6-1~22.04_amd64.deb
 sudo dpkg -i python3.10_3.10.12-1~22.04.2_amd64.deb
 sudo dpkg -i python3_3.10.6-1~22.04_amd64.deb
 
+```
 
-## Step 6: Fix the Mess with apt-get install -f
+### Step 6: Fix the Mess with `apt-get install -f`
+After running those dpkg commands, you might still have dependencies crying for attention. Fire up `sudo apt-get install -f` to automatically pick up the pieces. This should finally stitch your system back together.
 
-After running those dpkg commands, you might still have dependencies crying for attention. Fire up sudo apt-get install -f to automatically pick up the pieces. This should finally stitch your system back together. All errors that still apear at this point just mean you are missing dependencies.
-
-
-## Step 7: Reboot and Cross Your Fingers
-
+### Step 7: Reboot and Cross Your Fingers
 Once you’ve battled through the steps above, reboot your machine. With a bit of luck and a lot of crossed fingers, your graphical interface and everything else should spring back to life.
-Conclusion
 
+### Conclusion
 Moral of the story? Messing with your Python installation on Ubuntu can unleash all sorts of chaos. For those looking to experiment with different Python versions, consider safer alternatives like VMs, containers, or virtual environments to keep your main system stable and functioning.
-References
-
-    Ask Ubuntu - Boot into a Root Shell
-    Ask Ubuntu - Broken Python3, Dpkg, Apt-get
-    Packages Ubuntu - Python Dependencies
-    Unix & Linux Stack Exchange - Install Package with Dependencies Using Dpkg
+Thansk to the people that actually gave answer that where based on knowledge and not copy pasting crap others where mindlessly commenting.
+### References
+- [Ask Ubuntu - Boot into a Root Shell](https://askubuntu.com/questions/92556/how-do-i-boot-into-a-root-shell)
+- [Ask Ubuntu - Broken Python3, Dpkg, Apt-get](https://askubuntu.com/questions/1092919/ubuntu-16-04-completely-broken-python3-dpkg-apt-get)
+- [Packages Ubuntu - Python Dependencies](https://packages.ubuntu.com/jammy/python/python3)
+- [Unix & Linux Stack Exchange - Install Package with Dependencies Using Dpkg](https://unix.stackexchange.com/questions/366488/how-to-use-dpkg-i-to-install-package-and-dependencies-where-dependencies-are-al)
 
 So, here you go. Follow these steps, and hopefully, you'll get your system back on track without too much despair. Good luck!
