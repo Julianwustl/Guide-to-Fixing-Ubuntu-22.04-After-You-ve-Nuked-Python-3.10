@@ -2,9 +2,11 @@
 
 
 If you've accidentally wrecked your Python installation on a Debian-based system like Ubuntu, you're in for a wild ride. Though the fix might seem trivial, messing up Python can tie your system into knots in ways you wouldn't believe. So, for those unlucky enough to have blundered like I have, here’s how to claw your way back:
-Step 1: Don’t Panic and Don't Reboot
 
-If you corrupt your Python, things might seem fine—at first. But the moment you try to open bash or zsh, you'll know something’s up. My top tip: if you realize your mistake, do not reboot your machine. Cause you midght still be able to use your browser which makes the whole process less of a hussle and you can jump to step 4. If your system is fresh with little to no important data, it might be easier to just wipe it and reinstall Ubuntu. Trust me, it could save you days of headache.
+
+## Step 1: Don’t Panic and Don't Reboot
+
+If you corrupt your Python, things might seem fine—at first. But the moment you try to open bash or zsh, you'll know something’s up. If you realize your mistake, do not reboot your machine. Cause you midght still be able to use your browser which makes the whole process less of a hussle and you can jump to Step 4. If your system is fresh with little to no important data, it might be easier to just wipe it and reinstall Ubuntu. Trust me, it could save you days of headache.
 
 
  ## Step 2: If You've Rebooted and It's All Gone Pear-Shaped
