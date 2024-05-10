@@ -9,29 +9,23 @@ If you corrupt your Python, things might seem fine—at first. But the moment yo
 
  ## Step 2: If You've Rebooted and It's All Gone Pear-Shaped
 
-Maybe you rebooted, and now your graphics are gone. First things first, you’ll need to boot into a root shell. This part is crucial and thankfully, doesn't rely on Python. Here’s a lifeline: How do I boot into a root shell?.
+Maybe you rebooted, and now your graphics are gone. First things first, you’ll need to boot into a root shell. This part is crucial and thankfully, doesn't rely on Python. Here’s a lifeline: [How do I boot into a root shell?](https://askubuntu.com/questions/92556/how-do-i-boot-into-a-root-shell).
 
 
-## Step 3: Forget apt, It’s Not Your Friend Here
-
+### Step 3: Forget `apt`, It’s Not Your Friend Here
 You might think, "Ah, I’ll just use apt to fix my Python." Nope. Apt depends on Python, and you just torpedoed Python. All those Stack Overflow posts and guides telling you to use apt? Ignore them. They’re dead ends here.
 
+### Step 4: Time to Go Old School with `curl` or `wget`
+Next up, you need to manually fetch the damaged or missing Python *.deb files. You’ll find your salvation summarised beautifully in this response: [Ubuntu 16.04 completely broken Python3, dpkg, apt-get](https://askubuntu.com/questions/1092919/ubuntu-16-04-completely-broken-python3-dpkg-apt-get). But for your Ubuntu 22.04 system, check out the mirrors for the Python dependencies you need on your smartphone or another device.
 
-## Step 4: Time to Go Old School with curl or wget
+### Step 5: Download and Deploy with `dpkg`
+Head over to [packages.ubuntu.com](https://packages.ubuntu.com), search for the Python3 package, and grab these guys:
+- `python3`
+- `python3-minimal`
+- `libpython3-stdlib`
+- `python 3.10`
 
-Next up, you need to manually fetch the damaged or missing Python *.deb files. You’ll find your salvation summarised beautifully in this response: Ubuntu 16.04 completely broken Python3, dpkg, apt-get. But for your Ubuntu 22.04 system, check out the mirrors for the Python dependencies you need on your smartphone or another device.
-
-
-## Step 5: Download and Deploy with dpkg
-
-Head over to packages.ubuntu.com, search for the Python3 package, and grab these guys:
-
-    python3
-    python3-minimal
-    libpython3-stdlib
-    python 3.10
-
-Make sure they match your Ubuntu release to avoid further chaos. Once downloaded, install them in this precise order:
+Make sure they match your Ubuntu release to avoid further chaos. Once downloaded, install them in the correct order as you can observe this  [link](https://packages.ubuntu.com/jammy/python/python3)
 
 bash
 
